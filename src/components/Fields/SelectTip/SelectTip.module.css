@@ -1,0 +1,13 @@
+.tipsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.tipsContainer input {
+  width: calc(100% - 20px);
+  padding: 0 10px;
+}
+.tipsContainer input::placeholder {
+  color: var(--Darkgrayishcyan);
+}
+

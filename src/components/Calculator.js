@@ -1,8 +1,9 @@
 import Layout from "./Layout/Layout";
-import SelectTip from "./Fields/SelectTip";
-import classes from './Calculator.module.css'
+import SelectTip from "./Fields/SelectTip/SelectTip";
+import classes from "./Calculator.module.css";
 import Bill from "./Fields/Bill";
 import NumberOfPeople from "./Fields/NumberOfPeople";
+import Total from "./Total/Total";
 
 function Calculator() {
   return (
@@ -12,6 +13,7 @@ function Calculator() {
         <SelectTip />
         <NumberOfPeople />
       </form>
+      <Total />
     </Layout>
   );
 }

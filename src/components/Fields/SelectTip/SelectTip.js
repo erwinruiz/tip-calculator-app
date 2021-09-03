@@ -1,5 +1,6 @@
-import classes from "./SelectTip.module.css";
 import Tip from "./Tip";
+import Input from "../../UI/Input";
+import classes from "./SelectTip.module.css";
 
 function SelectTip() {
   const tipPercentage = [
@@ -13,8 +14,10 @@ function SelectTip() {
     <div>
       <h3>Select Tip %</h3>
       <div className={classes.tipsContainer}>
-        {tipPercentage.map( (tip, i) => <Tip key={i} value={tip.value} />)}
-        <input type="number" placeholder="Custom" />
+        {tipPercentage.map((tip, i) => (
+          <Tip key={i} value={tip.value} />
+        ))}
+        <Input type="number" placeholder="Custom" />
       </div>
     </div>
   );

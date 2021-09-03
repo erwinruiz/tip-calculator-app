@@ -1,4 +1,5 @@
-import classes from "./Tip.module.css";
+// import classes from "./Tip.module.css";
+import Button from "../../UI/Button";
 
 function Tip(props) {
   const { value } = props;
@@ -9,9 +10,9 @@ function Tip(props) {
   };
 
   return (
-    <button className={classes.button} onClick={selectTipHandler}>
+    <Button onClick={selectTipHandler}>
       {value}%
-    </button>
+    </Button>
   );
 }
 

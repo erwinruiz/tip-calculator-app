@@ -1,0 +1,41 @@
+.container {
+  background-color: var(--Verydarkcyan);
+  padding: 35px 20px 20px 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container .section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .section:last-of-type {
+  margin-bottom: 15px;
+}
+.container .section h3 {
+  color: var(--White);
+}
+.container .section h3 span {
+  display: block;
+  color: var(--Darkgrayishcyan);
+  font-size: 12px;
+}
+.container .section p {
+  color: var(--Strongcyan);
+  font-weight: 700;
+  font-size: 26px;
+}
+.container .button {
+  background-color: var(--Lightgrayishcyan);
+  color: var(--Verydarkcyan);
+  text-transform: uppercase;
+  font-size: 18px;
+  opacity: 0.1;
+}
+.container .buttonActive {
+  background-color: var(--Strongcyan);
+  color: var(--Verydarkcyan);
+  opacity: initial;
+}

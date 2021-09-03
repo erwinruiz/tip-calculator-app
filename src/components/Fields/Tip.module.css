@@ -1,0 +1,16 @@
+button {
+    background-color: var(--Verydarkcyan);
+    border: none;
+    border-radius: 6px;
+    height: 42px;
+    width: 100%;
+    color: var(--White);
+    font-size: 24px;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    cursor: pointer;
+}
+.active {
+    background-color: var(--Strongcyan);
+    color: var(--Verydarkcyan);
+}

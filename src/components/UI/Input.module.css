@@ -1,0 +1,35 @@
+.container img {
+  position: absolute;
+  margin-top: 12px;
+  margin-left: 20px;
+}
+.container input {
+  height: 45px;
+  width: calc(100% - 53px);
+  padding: 0 15px 0 38px;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  font-family: "Space Mono", monospace;
+  text-align: right;
+  background-color: var(--Lightgrayishcyan2);
+  color: var(--Verydarkcyan);
+  font-size: 24px;
+  font-weight: 700;
+}
+.container input::placeholder {
+  color: var(--Darkgrayishcyan2);
+}
+
+/* Hide Arrows From Input Number */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

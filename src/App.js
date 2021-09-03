@@ -1,5 +1,7 @@
+import Calculator from "./components/Calculator";
+
 function App() {
-  return <h1>Tip calculator app</h1>
+  return <Calculator />;
 }
 
 export default App;

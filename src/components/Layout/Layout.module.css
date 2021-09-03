@@ -1,0 +1,17 @@
+.container {
+  max-height: 100vh;
+  width: 375px;
+  background-color: var(--Lightgrayishcyan);
+}
+.logo {
+  padding: 35px 0;
+  display: flex;
+  justify-content: center;
+}
+.card {
+  height: 100%;
+  background-color: var(--White);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding: 30px;
+}

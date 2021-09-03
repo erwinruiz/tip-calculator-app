@@ -1,0 +1,23 @@
+.tipsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+input {
+  border-radius: 6px;
+  height: 42px;
+  width: calc(100% - 20px);
+  padding: 0 10px;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  font-family: "Space Mono", monospace;
+  text-align: right;
+  background-color: var(--Lightgrayishcyan2);
+  color: var(--Verydarkcyan);
+  font-size: 24px;
+  font-weight: 700;
+}
+input::placeholder {
+  color: var(--Darkgrayishcyan2);
+}

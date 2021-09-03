@@ -11,13 +11,13 @@ function SelectTip() {
     { value: 50 },
   ];
   return (
-    <div>
+    <div className={classes.container}>
       <h3>Select Tip %</h3>
       <div className={classes.tipsContainer}>
         {tipPercentage.map((tip, i) => (
           <Tip key={i} value={tip.value} />
         ))}
-        <Input type="number" placeholder="Custom" />
+        <Input className={classes.input} type="number" placeholder="Custom" />
       </div>
     </div>
   );

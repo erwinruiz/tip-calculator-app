@@ -1,4 +1,10 @@
 .tipActive {
-    background-color: var(--Strongcyan);
-    color: var(--Verydarkcyan);
+  background-color: var(--Strongcyan);
+  color: var(--Verydarkcyan);
+}
+
+@media (min-width: 820px) {
+  .button {
+    font-size: 22px;
+  }
 }

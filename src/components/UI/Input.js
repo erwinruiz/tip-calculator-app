@@ -5,7 +5,12 @@ function Input(props) {
   return (
     <div className={classes.container}>
       {imgPath && <img src={imgPath} alt={imgAlt} />}
-      <input className={props.className} type={type} placeholder={placeholder} />
+      <input
+        className={props.className}
+        type={type}
+        placeholder={placeholder}
+        onChange={props.onChange}
+      />
     </div>
   );
 }

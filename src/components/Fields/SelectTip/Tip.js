@@ -6,7 +6,7 @@ function Tip(props) {
 
   const selectTipHandler = (e) => {
     e.preventDefault();
-    console.log(value);
+    props.onAddTip(value);
   };
 
   return (

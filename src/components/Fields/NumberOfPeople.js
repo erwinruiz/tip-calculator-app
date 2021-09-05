@@ -1,6 +1,10 @@
 import Input from "../UI/Input";
 
-function NumberOfPeople() {
+function NumberOfPeople(props) {
+  const changeNumberOfPeopleHandler = (e) => {
+    props.onAddNumberOfPeople(e.target.value);
+  };
+
   return (
     <div>
       <h3>Number of People</h3>
@@ -9,6 +13,7 @@ function NumberOfPeople() {
         imgAlt="person icon"
         placeholder="0"
         type="number"
+        onChange={changeNumberOfPeopleHandler}
       />
     </div>
   );

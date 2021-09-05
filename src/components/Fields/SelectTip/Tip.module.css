@@ -1,4 +1,7 @@
-.tipActive {
+.button:hover {
+  background-color: hsla(172, 67%, 45%, 0.527);
+}
+.btnActive {
   background-color: var(--Strongcyan);
   color: var(--Verydarkcyan);
 }

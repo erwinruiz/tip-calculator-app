@@ -1,7 +1,9 @@
 import classes from "./Total.module.css";
 import Button from "../UI/Button";
 
-function Total() {
+function Total(props) {
+  const { tipAmount, total } = props.result;
+
   return (
     <div className={classes.container}>
       <div className={classes.sections}>
@@ -11,7 +13,7 @@ function Total() {
               Tip Amount <span>/ person</span>
             </h3>
           </div>
-          <p>$0.00</p>
+          {tipAmount > 0 ? <p>{tipAmount.toFixed(2)}</p> : <p>$0.00</p>}
         </div>
         <div className={classes.section}>
           <div>
@@ -19,7 +21,7 @@ function Total() {
               Total <span>/ person</span>
             </h3>
           </div>
-          <p>$0.00</p>
+          {total > 0 ? <p>{total.toFixed(2)}</p> : <p>$0.00</p>}
         </div>
       </div>
       <Button className={classes.button}>Reset</Button>

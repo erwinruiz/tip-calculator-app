@@ -11,14 +11,14 @@ const tipPercentage = [
 ];
 
 function SelectTip(props) {
-  const { tip } = props;
+  const { tipInput } = props;
 
   const changeTipHandler = (e) => {
-    props.onAddTip(e.target.value);
+    props.onAddTipInput(e.target.value);
   };
 
   const onAddTipHandler = (tip) => {
-    props.onAddTip(tip);
+    props.onAddTipButton(tip);
   };
 
   return (
@@ -33,7 +33,7 @@ function SelectTip(props) {
           type="number"
           placeholder="Custom"
           onChange={changeTipHandler}
-          value={tip}
+          value={tipInput}
         />
       </div>
     </div>

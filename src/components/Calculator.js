@@ -14,6 +14,7 @@ const initialState = {
 function Calculator() {
   const [bill, setBill] = useState("");
   const [tip, setTip] = useState("");
+  const [tipInput, setTipInput] = useState("");
   const [numberOfPeople, setNumberOfPeople] = useState("");
   const [result, setResult] = useState(initialState);
 
@@ -31,7 +32,13 @@ function Calculator() {
     setBill(bill);
   };
 
-  const addTipHandler = (tip) => {
+  const addTipButtonHandler = (tip) => {
+    setTipInput("");
+    setTip(tip);
+  };
+
+  const addTipInputHandler = (tip) => {
+    setTipInput(tip);
     setTip(tip);
   };
 
@@ -42,6 +49,7 @@ function Calculator() {
   const resetFieldsHandler = () => {
     setBill("");
     setTip("");
+    setTipInput("");
     setNumberOfPeople("");
   };
 
@@ -49,7 +57,11 @@ function Calculator() {
     <Layout>
       <form className={classes.form}>
         <Bill onAddBill={addBillHandler} bill={bill} />
-        <SelectTip onAddTip={addTipHandler} tip={tip} />
+        <SelectTip
+          onAddTipButton={addTipButtonHandler}
+          onAddTipInput={addTipInputHandler}
+          tipInput={tipInput}
+        />
         <NumberOfPeople
           onAddNumberOfPeople={addNumberOfPeopleHandler}
           numberOfPeople={numberOfPeople}

@@ -1,6 +1,7 @@
 import Input from "../UI/Input";
 
 function Bill(props) {
+  const { bill } = props;
   const changeBillHandler = (e) => {
     props.onAddBill(e.target.value);
   };
@@ -14,6 +15,7 @@ function Bill(props) {
         placeholder="0"
         type="number"
         onChange={changeBillHandler}
+        value={bill}
       />
     </div>
   );

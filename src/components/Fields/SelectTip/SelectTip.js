@@ -2,14 +2,16 @@ import Tip from "./Tip";
 import Input from "../../UI/Input";
 import classes from "./SelectTip.module.css";
 
+const tipPercentage = [
+  { value: 5 },
+  { value: 10 },
+  { value: 15 },
+  { value: 25 },
+  { value: 50 },
+];
+
 function SelectTip(props) {
-  const tipPercentage = [
-    { value: 5 },
-    { value: 10 },
-    { value: 15 },
-    { value: 25 },
-    { value: 50 },
-  ];
+  const { tip } = props;
 
   const changeTipHandler = (e) => {
     props.onAddTip(e.target.value);
@@ -31,6 +33,7 @@ function SelectTip(props) {
           type="number"
           placeholder="Custom"
           onChange={changeTipHandler}
+          value={tip}
         />
       </div>
     </div>

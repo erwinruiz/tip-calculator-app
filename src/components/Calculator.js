@@ -12,9 +12,9 @@ const initialState = {
 };
 
 function Calculator() {
-  const [bill, setBill] = useState(0);
-  const [tip, setTip] = useState(0);
-  const [numberOfPeople, setNumberOfPeople] = useState(0);
+  const [bill, setBill] = useState("");
+  const [tip, setTip] = useState("");
+  const [numberOfPeople, setNumberOfPeople] = useState("");
   const [result, setResult] = useState(initialState);
 
   useEffect(() => {
@@ -39,14 +39,23 @@ function Calculator() {
     setNumberOfPeople(numberOfPeople);
   };
 
+  const resetFieldsHandler = () => {
+    setBill("");
+    setTip("");
+    setNumberOfPeople("");
+  };
+
   return (
     <Layout>
       <form className={classes.form}>
-        <Bill onAddBill={addBillHandler} />
-        <SelectTip onAddTip={addTipHandler} />
-        <NumberOfPeople onAddNumberOfPeople={addNumberOfPeopleHandler} />
+        <Bill onAddBill={addBillHandler} bill={bill} />
+        <SelectTip onAddTip={addTipHandler} tip={tip} />
+        <NumberOfPeople
+          onAddNumberOfPeople={addNumberOfPeopleHandler}
+          numberOfPeople={numberOfPeople}
+        />
       </form>
-      <Total result={result} />
+      <Total result={result} onResetFields={resetFieldsHandler} />
     </Layout>
   );
 }

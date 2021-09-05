@@ -4,6 +4,9 @@ import Button from "../UI/Button";
 function Total(props) {
   const { tipAmount, total } = props.result;
 
+  const resetHandler = () => {
+    props.onResetFields();
+  }
   return (
     <div className={classes.container}>
       <div className={classes.sections}>
@@ -24,7 +27,7 @@ function Total(props) {
           {total > 0 ? <p>{total.toFixed(2)}</p> : <p>$0.00</p>}
         </div>
       </div>
-      <Button className={classes.button}>Reset</Button>
+      <Button className={classes.button} onClick={resetHandler}>Reset</Button>
     </div>
   );
 }

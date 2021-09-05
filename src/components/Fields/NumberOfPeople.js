@@ -1,6 +1,7 @@
 import Input from "../UI/Input";
 
 function NumberOfPeople(props) {
+  const { numberOfPeople } = props;
   const changeNumberOfPeopleHandler = (e) => {
     props.onAddNumberOfPeople(e.target.value);
   };
@@ -14,6 +15,7 @@ function NumberOfPeople(props) {
         placeholder="0"
         type="number"
         onChange={changeNumberOfPeopleHandler}
+        value={numberOfPeople}
       />
     </div>
   );

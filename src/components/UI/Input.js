@@ -1,7 +1,7 @@
 import classes from "./Input.module.css";
 
 function Input(props) {
-  const { imgPath, imgAlt, type, placeholder } = props;
+  const { imgPath, imgAlt, type, placeholder, value } = props;
   return (
     <div className={classes.container}>
       {imgPath && <img src={imgPath} alt={imgAlt} />}
@@ -10,6 +10,7 @@ function Input(props) {
         type={type}
         placeholder={placeholder}
         onChange={props.onChange}
+        value={value}
       />
     </div>
   );

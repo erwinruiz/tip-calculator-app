@@ -6,21 +6,25 @@ import NumberOfPeople from "./Fields/NumberOfPeople";
 import Total from "./Total/Total";
 import { useState, useEffect } from "react";
 
+const initialState = {
+  tipAmount: 0,
+  total: 0,
+};
+
 function Calculator() {
   const [bill, setBill] = useState(0);
   const [tip, setTip] = useState(0);
   const [numberOfPeople, setNumberOfPeople] = useState(0);
-  const [result, setResult] = useState({
-    tipAmount: 0,
-    total: 0,
-  });
+  const [result, setResult] = useState(initialState);
 
   useEffect(() => {
-    if (bill > 0 && tip > 0 && numberOfPeople > 0) {
-      const tipAmount = (bill * tip) / 100 / numberOfPeople;
-      const total = bill / numberOfPeople + tipAmount;
-      setResult({ tipAmount, total });
+    if (bill <= 0 || tip <= 0 || numberOfPeople <= 0) {
+      setResult(initialState);
+      return;
     }
+    const tipAmount = (bill * tip) / 100 / numberOfPeople;
+    const total = bill / numberOfPeople + tipAmount;
+    setResult({ tipAmount, total });
   }, [bill, tip, numberOfPeople]);
 
   const addBillHandler = (bill) => {

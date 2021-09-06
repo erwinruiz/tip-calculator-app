@@ -36,11 +36,13 @@
   text-transform: uppercase;
   font-size: 18px;
   opacity: 0.1;
+  cursor: not-allowed;
 }
 .container .buttonActive {
   background-color: var(--Strongcyan);
   color: var(--Verydarkcyan);
   opacity: initial;
+  cursor: pointer;
 }
 
 @media (min-width: 820px) {
@@ -58,5 +60,8 @@
   }
   .container .section p {
     font-size: 38px;
+  }
+  .container .buttonActive:hover {
+    background-color: hsla(172, 67%, 45%, 0.527);
   }
 }

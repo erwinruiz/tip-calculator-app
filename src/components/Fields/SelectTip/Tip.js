@@ -2,7 +2,7 @@ import classes from "./Tip.module.css";
 import Button from "../../UI/Button";
 
 function Tip(props) {
-  const { value } = props;
+  const { value, isActive } = props;
 
   const selectTipHandler = (e) => {
     e.preventDefault();
@@ -10,7 +10,10 @@ function Tip(props) {
   };
 
   return (
-    <Button className={classes.button} onClick={selectTipHandler}>
+    <Button
+      className={`${classes.button} ${isActive && classes.buttonActive}`}
+      onClick={selectTipHandler}
+    >
       {value}%
     </Button>
   );

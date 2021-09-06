@@ -8,7 +8,7 @@
   width: calc(100% - 53px);
   padding: 0 15px 0 38px;
   outline: none;
-  border: none;
+  border: 1px solid var(--Lightgrayishcyan2);
   border-radius: 6px;
   font-family: "Space Mono", monospace;
   text-align: right;
@@ -20,9 +20,18 @@
 .container input::placeholder {
   color: var(--Darkgrayishcyan2);
 }
+.container input:focus {
+  border: 1px solid var(--Lightgrayishcyan);
+}
+
+/* Remove iOS input shadow */
+input[type="number"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 
 /* Hide Arrows From Input Number */
-
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

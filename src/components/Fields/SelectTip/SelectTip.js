@@ -11,7 +11,7 @@ const tipPercentage = [
 ];
 
 function SelectTip(props) {
-  const { tipInput } = props;
+  const { tipInput, tip: enteredTip } = props;
 
   const changeTipHandler = (e) => {
     props.onAddTipInput(e.target.value);
@@ -26,7 +26,12 @@ function SelectTip(props) {
       <h3>Select Tip %</h3>
       <div className={classes.tipsContainer}>
         {tipPercentage.map((tip, i) => (
-          <Tip key={i} value={tip.value} onAddTip={onAddTipHandler} />
+          <Tip
+            key={i}
+            value={tip.value}
+            onAddTip={onAddTipHandler}
+            isActive={tip.value === enteredTip}
+          />
         ))}
         <Input
           className={classes.input}

@@ -32,9 +32,14 @@ function Calculator() {
     setBill(bill);
   };
 
-  const addTipButtonHandler = (tip) => {
+  const addTipButtonHandler = (selectedTip) => {
     setTipInput("");
-    setTip(tip);
+    // Compare if the selected button already is active to remove 'buttonActive' CSS class
+    if (tip !== selectedTip) {
+      setTip(selectedTip);
+    } else {
+      setTip("");
+    }
   };
 
   const addTipInputHandler = (tip) => {
@@ -61,6 +66,7 @@ function Calculator() {
           onAddTipButton={addTipButtonHandler}
           onAddTipInput={addTipInputHandler}
           tipInput={tipInput}
+          tip={tip} // to manipulate CSS class of active button
         />
         <NumberOfPeople
           onAddNumberOfPeople={addNumberOfPeopleHandler}
